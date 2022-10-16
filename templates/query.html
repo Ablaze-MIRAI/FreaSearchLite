@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[QUERY] / FreaSearchLite</title>
+</head>
+<body>
+    <a href="/" style="@media hide">トップへ戻る</a>
+    <h1>FreaSearchLite</h1>
+    <form action="." method="get">
+        [CLIENTNOTICE]
+        <input type="search" name="q" placeholder="検索ワードを入力" value="[QUERY]" style="@media hide"/>
+        <input type="submit" value="検索" style="@media hide">
+        <div style="display: flex; @media hide">
+            <p>クライアント復号化を有効</p>
+            <input type="checkbox" name="client" value="1" [CHECKED]>
+        </div>
+    </form>
+    [ERROR]
+    <div>[SITES]</div>
+    <style>
+        *{
+            font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        }
+        </style>
+</body>
+</html>

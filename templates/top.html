@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreaSearchLite</title>
+</head>
+<body>
+    <h1>FreaSearchLite</h1>
+    <div style="margin-bottom: 50px;">
+        <p>極限まで転送データ量を減らし低速な通信環境でも使用できるようにしたものです</p>
+        <ul style="font-size: 0.9rem;">
+            <li>クライアント復号化: クライアントへBASE64にエンコードされたデータを送信しクライアントで復号化することによってプロキシ等のブロックを回避するのもです(通信量が少し増えます)</li>
+        </ul>
+    </div>
+    <form action="." method="get">
+        <input type="search" name="q" placeholder="検索ワードを入力"/>
+        <input type="submit" value="検索">
+        <div style="display: flex;">
+            <p>クライアント復号化を有効</p>
+            <input type="checkbox" name="client" value="1">
+        </div>
+    </form>
+    <style>
+    *{
+        font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    }
+    </style>
+</body>
+</html>

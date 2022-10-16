@@ -1,0 +1,27 @@
+<a href=".">トップへ戻る</a>
+<noscript>
+    JavaScriptが有効でないため復号化を行えません
+</noscript>
+<h1 id="load">復号化中...</h1>
+<style>
+    html, body{
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<script>
+    const base64DecodeAsBlob = (text, type = "text/plain;charset=UTF-8") => fetch(`data:${type};base64,` + text).then(response => response.blob());
+    (async () =>{
+        const html = await base64DecodeAsBlob(`[BASE64]`);
+        const blob = new Blob([html], {type: "text/html"});
+        const link = URL.createObjectURL(blob);
+        const iframe = document.createElement("iframe");
+        iframe.src = link;
+        iframe.style = "border-width: 0px; border-style: unset; border-color: unset; border-image: unset;";
+        iframe.width = "100%";
+        iframe.height = "100%";
+        document.body.append(iframe);
+        URL.revokeObjectURL(link);
+        document.getElementById("load").style.display = "none";
+    })()
+</script>
