@@ -1,0 +1,3 @@
+# FreaSearchLite
+
+必要最低限のHTMLで構成された超軽量版FreaSearchです
