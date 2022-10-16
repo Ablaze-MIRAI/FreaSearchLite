@@ -1,0 +1,22 @@
+on:
+  push:
+    branches: main
+  workflow_dispatch:
+name: FTP Upload
+jobs:
+  upload:
+    name: Upload
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Sync Repo
+      uses: SamKirkland/FTP-Deploy-Action@4.3.2
+      with:
+        server: ${{ secrets.FTP_ADDR }}
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASS }}
+        exclude: |
+          **/.git*
+          **/.git*/**
