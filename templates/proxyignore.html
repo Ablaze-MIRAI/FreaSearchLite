@@ -10,7 +10,7 @@
     }
 </style>
 <script>
-    const base64DecodeAsBlob = (text, type = "text/plain;charset=UTF-8") => fetch(`data:${type};base64,` + text).then(response => response.blob());
+    const base64DecodeAsBlob = (text, type = "text/plain;charset=UTF-8") => fetch(`data:${type};base64,${text}`).then(response => response.blob());
     (async () =>{
         const html = await base64DecodeAsBlob(`[BASE64]`);
         const blob = new Blob([html], {type: "text/html"});
